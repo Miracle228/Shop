@@ -1,0 +1,54 @@
+{% extends "MainPage/base2.html" %}
+
+{%block content%}
+<div class="allcontain">
+	<div class="feturedsection">
+		<h1 class="text-center"><span class="bdots"></span>{{ articels.title }} </span></h1>
+	</div>
+	<hr>
+<br>
+
+<div class="container">
+	  <div class="row">
+		  <div class="col-lg-8">
+			<img src="{{articels.cover.url}}" alt="car4">
+			<h2>Description</h2>
+			<span>{{articels.body}}</span>
+			<ul>
+				<li>Name: {{articels.title}}</li>
+				<li>Year: media/{{articels.cover}}</li>
+				<li>Country: Italy</li>
+				<li>Velocity: 3.8</li>
+				<li>date: {{articels.date}}</li>
+			</ul>
+
+		  </div>
+		  <div class="col-lg-4">
+				<form>
+					<h2>Contact owner</h2>
+						<div class="form-group">
+						  <label for="exampleInputEmail1">Email address</label>
+						  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+						  <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+						</div>
+						<div class="form-group">
+								<label for="exampleInputPassword1">First Name</label>
+								<input type="text" class="form-control" placeholder="First Name">
+						</div>
+						<div class="form-group">
+								<label for="exampleInputPassword1">Last Name</label>
+								<input type="text" class="form-control" placeholder="Last Name">
+						</div>
+						<div class="form-group">
+						  <label for="exampleInputPassword1">Phone</label>
+						  <input type="text" class="form-control" placeholder="Phone">
+						</div>
+						<button type="submit" class="btn btn-primary">Submit</button>
+					  </form>
+					  <div class="noclass">
+						  <img src="image/Your-Ad-Here-300x250.jpg">
+					  </div>
+		  </div>
+	  </div>
+  </div>
+{%endblock%}

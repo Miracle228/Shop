@@ -1,0 +1,306 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>CARS </title>
+	<meta name="description" content="Scarica gratis il nostro Template HTML/CSS GARAGE. Se avete bisogno di un design per il vostro sito web GARAGE può fare per voi. Web Domus Italia">
+	<meta name="author" content="Web Domus Italia">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+	<link rel="stylesheet" type="text/css" href="{% static 'source/bootstrap-3.3.6-dist/css/bootstrap.css'%}">
+	<link rel="stylesheet" type="text/css" href="{% static 'source/font-awesome-4.5.0/css/font-awesome.css'%}">
+	<link rel="stylesheet" type="text/css" href="{% static 'style/slider.css'%}">
+
+	<link rel="stylesheet" type="text/css" href="{% static 'style/mystyle.css'%}">
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+
+<div class="navbar">
+	<a href="/auth">Home</a>
+	<a href="/auth/list">List of cars</a>
+	<a href="/auth/login">Login</a>
+</div>
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#cart" id="shopCart"><i class="fa fa-shopping-cart" style="font-size:24px"></i> <span class="total-count"></span></button>
+
+<div class="container">
+	<br>
+	<div id="myCarousel" class="carousel slide" data-ride="carousel">
+	  <!-- Indicators -->
+	  <ol class="carousel-indicators">
+		<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+		<li data-target="#myCarousel" data-slide-to="1"></li>
+		<li data-target="#myCarousel" data-slide-to="2"></li>
+	  </ol>
+
+	  <!-- Wrapper for slides -->
+	  <div class="carousel-inner" role="listbox">
+
+		<div class="item active">
+			<div class="">
+				<div class="txthover">
+					<img src="{%static 'image/2.jpg' %}" alt="car2">
+						<div class="txtcontent">
+							<div class="stars">
+								<div class="glyphicon glyphicon-star"></div>
+								<div class="glyphicon glyphicon-star"></div>
+								<div class="glyphicon glyphicon-star"></div>
+							</div>
+							<div class="simpletxt" style="text-align: center;">
+								<h3 class="name">Lamborghini</h3>
+								<p>"Lorem ipsum dolor sit amet, consectetur,<br>
+	 							sed do eiusmod tempor incididunt" </p>
+	 							<h4 class="price">9000 &euro;</h4>
+	 							<button><a href="single-car.html">READ MORE</a></button>
+                <button class="add-to-cart" data-price="9000">Add to cart</button><br>
+
+							</div>
+							<div class="stars2">
+								<div class="glyphicon glyphicon-star"></div>
+								<div class="glyphicon glyphicon-star"></div>
+								<div class="glyphicon glyphicon-star"></div>
+							</div>
+						</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="item">
+			<div class="">
+				<div class="txthover">
+					<img src="{%static 'image/3.jpg' %}" alt="car2">
+						<div class="txtcontent">
+							<div class="stars">
+								<div class="glyphicon glyphicon-star"></div>
+								<div class="glyphicon glyphicon-star"></div>
+								<div class="glyphicon glyphicon-star"></div>
+							</div>
+							<div class="simpletxt">
+								<h3 class="name">Mustang</h3>
+								<p>"Lorem ipsum dolor sit amet, consectetur,<br>
+	 							sed do eiusmod tempor incididunt" </p>
+	 							<h4 class="price">900 &euro;</h4>
+                <button><a href="single-car.html">READ MORE</a></button>
+                <button class="add-to-cart" data-price="9000">Add to cart</button><br>
+							</div>
+							<div class="stars2">
+								<div class="glyphicon glyphicon-star"></div>
+								<div class="glyphicon glyphicon-star"></div>
+								<div class="glyphicon glyphicon-star"></div>
+							</div>
+						</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="item">
+
+			<div class="">
+				<div class="txthover">
+					<img src="{%static 'image/1.jpg' %}" alt="car2">
+						<div class="txtcontent">
+							<div class="stars">
+								<div class="glyphicon glyphicon-star"></div>
+								<div class="glyphicon glyphicon-star"></div>
+								<div class="glyphicon glyphicon-star"></div>
+							</div>
+							<div class="simpletxt">
+								<h3 class="name">Mazerati</h3>
+								<p>"Lorem ipsum dolor sit amet, consectetur,<br>
+	 							sed do eiusmod tempor incididunt" </p>
+	 							<h4 class="price">900 &euro;</h4>
+                <button><a href="single-car.html">READ MORE</a></button>
+                <button class="add-to-cart" data-price="9000">Add to cart</button><br>
+							</div>
+							<div class="stars2">
+								<div class="glyphicon glyphicon-star"></div>
+								<div class="glyphicon glyphicon-star"></div>
+								<div class="glyphicon glyphicon-star"></div>
+							</div>
+						</div>
+				</div>
+			</div>
+		</div>
+	  </div>
+	  <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+		<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+		<span class="sr-only">Previous</span>
+	  </a>
+	  <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+		<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+		<span class="sr-only">Next</span>
+	  </a>
+	</div>
+  </div>
+<div class="allcontain">
+	<div class="feturedsection">
+		<h1 class="text-center"><span class="bdots"></span>F E A T U R E S<span class="carstxt">C A R S</span></h1>
+	</div>
+<br>
+<br>
+	<div class="container">
+		<div class="row">
+
+			<!--List of cars start-->
+			<!-- <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+				<div class="txthover">
+					<img src="image/car1.jpg" alt="car4">
+						<div class="txtcontent">
+							<div class="stars">
+								<div class="glyphicon glyphicon-star"></div>
+								<div class="glyphicon glyphicon-star"></div>
+								<div class="glyphicon glyphicon-star"></div>
+							</div>
+							<div class="simpletxt">
+								<h3 class="name">Rover</h3>
+								<p>"Lorem ipsum dolor sit amet, consectetur,<br>
+	 							sed do eiusmod tempor incididunt" </p>
+	 							<h4 class="price">1000 &euro;</h4>
+	 							<button>READ MORE</button><br>
+	 							<div class="wishtxt">
+		 							<p class="paragraph1"> Add to Wishlist <span class="glyphicon glyphicon-heart"></span> </p>
+		 							<p class="paragraph2">Compare <span class="icon"><img src="image/compicon.png" alt="compicon"></span></p>
+		 						</div>
+							</div>
+							<div class="stars2">
+								<div class="glyphicon glyphicon-star"></div>
+								<div class="glyphicon glyphicon-star"></div>
+								<div class="glyphicon glyphicon-star"></div>
+							</div>
+						</div>
+				</div>
+			</div>
+			<!--List of cars end-->
+
+      {% block content%}
+
+      {%endblock content%}
+
+
+
+
+
+
+
+
+
+		</div>
+	</div>
+	<br>
+	<br>
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-2">
+
+			</div>
+			<div class="col-lg-3">
+				<img src="{%static 'image/sedan-512.png'%}" style="width:160px; height:100px">
+				<br>
+				Here you can sold your car.
+			</div>
+			<div class="col-lg-3">
+				<img src="{%static 'image/sedan-512.png'%}" style="width:160px; height:100px">
+				<br>
+				Rent other car.
+			</div>
+			<div class="col-lg-3">
+				<img src="{%static 'image/sedan-512.png'%}" style="width:160px; height:100px">
+				<br>
+				Or just look for something.
+			</div>
+			<div class="col-lg-1">
+
+			</div>
+		</div>
+	</div>
+	<br>
+	<br>
+  </div>
+<!-- Footer -->
+<footer class="page-footer font-small blue pt-4">
+	<!-- Footer Links -->
+	<div class="container-fluid text-center text-md-left">
+	  <!-- Grid row -->
+	  <div class="row">
+		<!-- Grid column -->
+		<div class="col-md-6 mt-md-0 mt-3">
+		  <!-- Content -->
+		  <h5 class="text-uppercase">Footer Content</h5>
+		  <p>Here you can use rows and columns to organize your footer content.</p>
+		</div>
+		<!-- Grid column -->
+		<hr class="clearfix w-100 d-md-none pb-3">
+		<!-- Grid column -->
+		<div class="col-md-3 mb-md-0 mb-3">
+		  <!-- Links -->
+		  <h5 class="text-uppercase">Links</h5>
+		  <ul class="list-unstyled">
+			<li>
+			  <a href="#!">Link 1</a>
+			</li>
+			<li>
+			  <a href="#!">Link 2</a>
+			</li>
+			<li>
+			  <a href="#!">Link 3</a>
+			</li>
+			<li>
+			  <a href="#!">Link 4</a>
+			</li>
+		  </ul>
+		</div>
+		<div class="col-md-3 mb-md-0 mb-3">
+		  <h5 class="text-uppercase">Links</h5>
+		  <ul class="list-unstyled">
+			<li>
+			  <a href="#!">Link 1</a>
+			</li>
+			<li>
+			  <a href="#!">Link 2</a>
+			</li>
+			<li>
+			  <a href="#!">Link 3</a>
+			</li>
+			<li>
+			  <a href="#!">Link 4</a>
+			</li>
+		  </ul>
+		</div>
+	  </div>
+	</div>
+	<div class="footer-copyright text-center py-3">© 2019 Copyright:
+	</div>
+	<div class="modal fade" id="cart" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			<div class="modal-dialog modal-lg" role="document">
+			  <div class="modal-content">
+				<div class="modal-header">
+				  <h5 class="modal-title" id="exampleModalLabel">Cart</h5>
+				  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				  </button>
+				</div>
+				<div class="modal-body">
+				  <table class="show-cart table">
+
+				  </table>
+				  <div>Total price: $<span class="total-cart"></span></div>
+				</div>
+				<div class="modal-footer">
+				  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+				  <button type="button" class="btn btn-primary">Order now</button>
+				  	<button class="clear-cart btn btn-danger" id="cartClear">Clear Cart</button>
+				</div>
+			  </div>
+			</div>
+		  </div>
+  </footer>
+  <script type="text/javascript" src="{% static 'source/bootstrap-3.3.6-dist/js/jquery.js' %}"></script>
+  <script type="text/javascript" src="{% static 'source/js/isotope.js' %}"></script>
+  <script type="text/javascript" src="{% static 'source/js/myscript.js' %}"></script>
+  <script type="text/javascript" src="{% static 'source/bootstrap-3.3.6-dist/js/jquery.1.11.js'%}"></script>
+  <script type="text/javascript" src="{% static 'source/bootstrap-3.3.6-dist/js/bootstrap.js'%}"></script>
+</body>
+</html>

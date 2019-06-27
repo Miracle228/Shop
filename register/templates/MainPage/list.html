@@ -1,0 +1,65 @@
+{% extends "MainPage/base2.html" %}
+{% block content %}
+<!-- <h2 class ="text-info">{{ articels.title }}</h2>
+<h6 class ="text-info"> date :{{ articels.date|date:"Y-m-d v H:i:s"}}</h6>
+<p>{{ articels.body|safe|linebreaks }}</p> -->
+<div class="allcontain">
+
+<hr>
+<br>
+<div class="container">
+        <div class="row">
+            <h2>List of cars</h2>
+        </div>
+{% for post in object_list %}
+
+        <div class="block">
+          <div class="row">
+              <div class="col-lg-2">
+              </div>
+              <div class="col-lg-8" >
+                <div class="span4">
+                    <img class="img-left" src="{{post.cover.url}}"/ style="box-shadow: 5px 3px">
+                    <div class="content-heading"><h3>{{post.title}} </h3></div>
+                    <span>{{post.body}}
+                    Price 6000$.
+                    </span>
+                </div>
+                <a href="/auth/car/{{post.id}}"><input type="btn" class="btn btn-primary" id="readMoreBtn" value="Read more"></a>
+                <input type="btn" data-name="{{post.title}}" data-price="6000" class="add-to-cart btn btn-primary" id="readMoreBtn" value="Add to cart" id="addToCartItem">
+              </div>
+
+                <div class="col-lg-2">
+
+                </div>
+         </div>
+         <br/>
+        </div>
+        {% endfor %}
+        <div class="row">
+            <div class="col-lg-2">
+
+            </div>
+            <div class="col-lg-8" style="text-align: center">
+                <nav aria-label="Page navigation example">
+                    <ul class="pagination justify-content-center">
+                        <li class="page-item disabled">
+                        <a class="page-link" href="#" tabindex="-1">Previous</a>
+                        </li>
+                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item">
+                        <a class="page-link" href="#">Next</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="col-lg-2"></div>
+        </div>
+    </div>
+
+
+
+
+{% endblock %}

@@ -1,0 +1,44 @@
+{% extends "MainPage/base2.html" %}
+{% block content %}
+<!-- <h2 class ="text-info">{{ articels.title }}</h2>
+<h6 class ="text-info"> date :{{ articels.date|date:"Y-m-d v H:i:s"}}</h6>
+<p>{{ articels.body|safe|linebreaks }}</p> -->
+<div class="allcontain">
+
+<hr>
+<br>
+{% for post in object_list %}
+<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3" style="padding-right: 10px; padding-top: 10px">
+	<div class="txthover" style="box-shadow:3px 5px">
+		<img src="media/{{post.cover}}" alt="car4">
+			<div class="txtcontent">
+				<div class="stars">
+					<div class="glyphicon glyphicon-star"></div>
+					<div class="glyphicon glyphicon-star"></div>
+					<div class="glyphicon glyphicon-star"></div>
+				</div>
+				<div class="simpletxt">
+					<h3 class="name">{{post.title}}</h3>
+					<p>"{{post.body}}" </p>
+					<h4 class="price">1000 &euro;</h4>
+					<button><a href="car/{{post.id}}">READ MORE</a></button>
+					<button class="add-to-cart" data-name="{{post.title}}" data-price="9000">Add to cart</button><br>
+					<div class="wishtxt">
+						<p class="paragraph1"> Add to Wishlist <span class="glyphicon glyphicon-heart"></span> </p>
+
+					</div>
+				</div>
+				<div class="stars2">
+					<div class="glyphicon glyphicon-star"></div>
+					<div class="glyphicon glyphicon-star"></div>
+					<div class="glyphicon glyphicon-star"></div>
+				</div>
+			</div>
+	</div>
+</div>
+<!--List of cars end-->
+
+
+
+{% endfor %}
+{% endblock %}
